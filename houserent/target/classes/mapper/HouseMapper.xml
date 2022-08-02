@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace：命名空间，用于隔离sql-->
+<!--1=1 表示的是默认为true-->
+<!--这里在monthrent的查询语句中的&gt;与&lt;表示的是大于号和小于号的转换，直接写>=,<=号文件中应该是不认的-->
+<!--这里在if语句中test的houseSearchVO写成了hosueSearchVo导致服务器报500错误：Parameter 'houseSearchVo' not found. Available parameters are -->
+<!--address和rentType查询要用contact的原因是要用模糊查询-->
+<!--这里因为houserentType的sql语句多写了一个“)”导致在转发到house-list页面时报500错误，但是它给的sql语句错误是houseMonthRent的maxRent语句显示不出来，结果找了半天还是没发现错误，最后自己在首页将搜索条件一个一个测试的时候才发现是租房类型的相关错误，真是醉了啊-->
+<!--Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and month_rent >= 2000
+                and month_rent ' at line 16-->
+<mapper namespace="com.javaclimb.houserent.mapper.HouseMapper">
+    <select id="searchHouse"  resultType="com.javaclimb.houserent.entity.House">
+        select * from t_house
+        <where>
+            1=1
+            <if test="houseSearchVO.status!=null" >
+                and status = #{houseSearchVO.status}
+            </if>
+            <if test="houseSearchVO.address!=null and houseSearchVO.address !='' ">
+                and address like concat('%',#{houseSearchVO.address},'%')
+            </if>
+            <if test="houseSearchVO.city!=null and houseSearchVO.city !='' ">
+                and city like concat('%',#{houseSearchVO.city},'%')
+            </if>
+            <if test="houseSearchVO.rentType!=null and houseSearchVO.rentType !='' ">
+                and rent_type = #{houseSearchVO.rentType}
+            </if>
+            <if test="houseSearchVO.minPrice!=null" >
+                and month_rent &gt;= #{houseSearchVO.minPrice}
+            </if>
+            <if test="houseSearchVO.maxPrice!=null" >
+                and month_rent &lt;= #{houseSearchVO.maxPrice}
+            </if>
+            <if test="houseSearchVO.minArea!=null" >
+                and area &gt;= #{houseSearchVO.minArea}
+            </if>
+            <if test="houseSearchVO.maxArea!=null" >
+                and area &lt;= #{houseSearchVO.maxArea}
+            </if>
+        </where>
+    </select>
+</mapper>

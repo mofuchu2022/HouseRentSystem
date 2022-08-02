@@ -1,0 +1,25 @@
+2022-07-14 15:45:25.469  INFO 19732 --- [restartedMain] com.javaclimb.houserent.Application      : Starting Application on Zhanghui with PID 19732 (D:\CodeStudy\Fangwuzulin\houserent\target\classes started by zhanghui in D:\CodeStudy\Fangwuzulin\houserent)
+2022-07-14 15:45:25.478  INFO 19732 --- [restartedMain] com.javaclimb.houserent.Application      : No active profile set, falling back to default profiles: default
+2022-07-14 15:45:25.563  INFO 19732 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-14 15:45:25.564  INFO 19732 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-14 15:45:26.814  WARN 19732 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.ssm.rental.mapper]' package. Please check your configuration.
+2022-07-14 15:45:27.902  INFO 19732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-07-14 15:45:27.948  INFO 19732 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-14 15:45:27.949  INFO 19732 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2022-07-14 15:45:27.958  INFO 19732 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.28] using APR version [1.7.0].
+2022-07-14 15:45:27.958  INFO 19732 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-07-14 15:45:27.958  INFO 19732 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-07-14 15:45:27.972  INFO 19732 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+2022-07-14 15:45:28.255  INFO 19732 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-07-14 15:45:28.262  INFO 19732 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-14 15:45:28.263  INFO 19732 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2699 ms
+2022-07-14 15:45:28.457  INFO 19732 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-14 15:45:28.595  INFO 19732 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-14 15:45:29.335  INFO 19732 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-07-14 15:45:29.586  INFO 19732 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-14 15:45:29.648  INFO 19732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-07-14 15:45:29.651  INFO 19732 --- [restartedMain] com.javaclimb.houserent.Application      : Started Application in 4.875 seconds (JVM running for 5.957)
+2022-07-14 15:45:29.654  INFO 19732 --- [restartedMain] com.javaclimb.houserent.Application      : Verio started at http://localhost:9999
+2022-07-14 15:45:33.622  INFO 19732 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 15:45:33.623  INFO 19732 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-14 15:45:33.629  INFO 19732 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
